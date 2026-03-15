@@ -76,7 +76,7 @@ export default function Layout() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-pearl text-navy font-sans antialiased selection:bg-navy selection:text-white flex flex-col">
+    <div className="min-h-screen bg-pearl text-navy font-sans antialiased selection:bg-navy selection:text-white flex flex-col overflow-x-hidden">
       {/* Search Overlay */}
       <div
         className={`fixed inset-0 z-[110] transition-opacity duration-400 ${isSearchOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}

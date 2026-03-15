@@ -326,7 +326,7 @@ export default function HeroCanvas() {
   }, [isLoaded, drawFrame]);
 
   return (
-    <>
+    <div style={{ overflowX: 'hidden', width: '100%' }}>
       {/* Loader */}
       {!isLoaded && (
         <div
@@ -850,6 +850,6 @@ export default function HeroCanvas() {
           }
         }
       `}</style>
-    </>
+    </div>
   );
 }
