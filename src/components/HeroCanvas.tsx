@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -14,6 +15,7 @@ function getFramePath(index: number): string {
 }
 
 export default function HeroCanvas() {
+  const navigate = useNavigate();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const heroStandaloneRef = useRef<HTMLDivElement>(null);
@@ -788,8 +790,8 @@ export default function HeroCanvas() {
             >
               Επικοινωνήστε μαζί μας για μια πρώτη δωρεάν συμβουλευτική συνεδρία.
             </p>
-            <a
-              href="/contact"
+            <button
+              onClick={() => navigate('/contact')}
               className="cta-button"
               style={{
                 display: 'inline-flex',
@@ -797,13 +799,14 @@ export default function HeroCanvas() {
                 justifyContent: 'center',
                 padding: '0.85rem 2.5rem',
                 border: '1px solid rgba(245,245,240,0.3)',
+                background: 'transparent',
                 color: '#f5f5f0',
                 fontFamily: '"Inter", sans-serif',
                 fontSize: '0.8rem',
                 fontWeight: 600,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                textDecoration: 'none',
+                cursor: 'pointer',
                 transition: 'background 0.3s ease, color 0.3s ease',
               }}
               onMouseEnter={(e) => {
@@ -816,7 +819,7 @@ export default function HeroCanvas() {
               }}
             >
               Επικοινωνία
-            </a>
+            </button>
           </div>
         </section>
       </div>
