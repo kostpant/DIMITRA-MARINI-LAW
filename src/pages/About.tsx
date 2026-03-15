@@ -1,5 +1,4 @@
 import React from 'react';
-import { Landmark } from 'lucide-react';
 
 export default function About() {
   return (
@@ -18,8 +17,21 @@ export default function About() {
       {/* Content */}
       <section className="py-20 lg:py-32 px-6 bg-pearl">
         <div className="max-w-4xl mx-auto flex flex-col items-center gap-16">
-          <div className="w-full max-w-md aspect-[3/4] bg-navy/5 relative overflow-hidden flex items-center justify-center">
-            <Landmark className="w-32 h-32 text-navy/10" />
+          <div className="w-full max-w-md aspect-[3/4] bg-navy/5 relative overflow-hidden">
+            <img src="/images/office-desk-window.jpg" alt="Δικηγορικό Γραφείο" className="w-full h-full object-cover" />
+          </div>
+
+          {/* Office Gallery */}
+          <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="aspect-square overflow-hidden">
+              <img src="/images/office-workspace.jpg" alt="Χώρος εργασίας" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="aspect-square overflow-hidden">
+              <img src="/images/office-shelf.jpg" alt="Βιβλιοθήκη γραφείου" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="aspect-square overflow-hidden">
+              <img src="/images/office-sign.jpg" alt="Πινακίδα γραφείου" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
           </div>
           
           <div className="text-center lg:text-left w-full">

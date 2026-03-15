@@ -2,17 +2,13 @@ import React from 'react';
 import { ChevronDown, ArrowUpRight, MapPin, Clock, Phone, Mail, Landmark, CreditCard } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { services } from '../data';
+import HeroCanvas from '../components/HeroCanvas';
 
 export default function Home() {
   return (
     <>
-      {/* Blank Hero Section */}
-      <section className="h-screen w-full bg-navy relative flex items-center justify-center overflow-hidden" id="hero">
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white flex flex-col items-center gap-2">
-          <span className="text-[10px] font-bold tracking-[0.2em] uppercase opacity-70">Scroll</span>
-          <ChevronDown className="w-5 h-5 opacity-70 animate-bounce" />
-        </div>
-      </section>
+      {/* Scroll-Driven Video Hero */}
+      <HeroCanvas />
 
       {/* Intro Section */}
       <section className="py-20 lg:py-32 px-6">
@@ -32,7 +28,7 @@ export default function Home() {
       <section className="bg-navy text-pearl" id="services">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {services.map((service, index) => (
-            <Link to={`/service/${service.id}`} key={index} className="group relative border-b border-r border-white/10 p-8 lg:p-12 min-h-[320px] flex flex-col justify-center bg-navy hover:bg-[#163254] transition-colors duration-500 cursor-pointer overflow-hidden block">
+            <Link to={`/service/${service.id}`} key={index} className="group relative border-b border-r border-white/10 p-8 lg:p-12 min-h-[320px] flex flex-col justify-center bg-navy hover:bg-[#6e6e70] transition-colors duration-500 cursor-pointer overflow-hidden block">
               <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <ArrowUpRight className="w-6 h-6 text-white" />
               </div>
@@ -54,8 +50,8 @@ export default function Home() {
       <section className="py-24 lg:py-32 bg-pearl" id="about">
         <div className="max-w-[1920px] mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <div className="w-full lg:w-1/2 relative">
-            <div className="aspect-[3/4] lg:aspect-square bg-navy/5 relative overflow-hidden flex items-center justify-center">
-              <Landmark className="w-32 h-32 text-navy/10" />
+            <div className="aspect-[3/4] lg:aspect-square bg-navy/5 relative overflow-hidden">
+              <img src="/images/office-workspace.jpg" alt="Δικηγορικό Γραφείο" className="w-full h-full object-cover" />
               <div className="absolute bottom-0 left-0 w-full bg-navy/90 backdrop-blur p-6 text-center text-pearl">
                 <p className="font-sans text-sm font-bold tracking-widest uppercase mb-1">Δήμητρα Κ. Μαρίνη</p>
                 <p className="font-serif italic text-lg opacity-80">Δικηγόρος, Κόρινθος</p>

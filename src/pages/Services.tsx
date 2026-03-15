@@ -21,7 +21,7 @@ export default function Services() {
       <section className="bg-navy text-pearl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {services.map((service, index) => (
-            <Link to={`/service/${service.id}`} key={index} className="group relative border-b border-r border-white/10 p-8 lg:p-12 min-h-[320px] flex flex-col justify-center bg-navy hover:bg-[#163254] transition-colors duration-500 cursor-pointer overflow-hidden block">
+            <Link to={`/service/${service.id}`} key={index} className="group relative border-b border-r border-white/10 p-8 lg:p-12 min-h-[320px] flex flex-col justify-center bg-navy hover:bg-[#6e6e70] transition-colors duration-500 cursor-pointer overflow-hidden block">
               <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <ArrowUpRight className="w-6 h-6 text-white" />
               </div>
