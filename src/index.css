@@ -5,11 +5,15 @@
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
   --color-navy: #58585A;
   --color-pearl: #f5f5f0;
-  --color-cerulean: #58585A;
+  --color-cerulean: #2a7ab5;
   --color-teal: #008080;
   --color-sage: #879d89;
   --color-orange: #d95c14;
   --color-red: #c8102e;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
